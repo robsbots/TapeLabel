@@ -6,7 +6,7 @@
 #                                                                             #
 #      V 0.01A : Robsbots : 26-05-26                                          #
 #                                                                             #
-#      License : PD. Public Domain. Free.                                     #
+#      Licence : PD. Public Domain. Free.                                     #
 #                As in Beer!!!! Do what you like like with this code.         #
 #                                                                             #
 #      Note : argparse has it's own license and is included as a courtesy     #
@@ -22,20 +22,20 @@
 #                                                                             #
 #     To use                                                                  #
 #                                                                             #
-#  $ tlabel.py --label "Hellorld!" -f ./out.bin                               #
+#  $ tlabel.py -L "Hellorld!" -F ./out.bin                                    #
 #                                                                             #
 #  --> Outputs binary file "./out.bin" containing a tape label "HELLORLD!"    #
 #                                                                             #
-#  $ tlabel.py --label "Hellorld!" -a ./out.txt                               #
+#  $ tlabel.py --label "Hellorld!" -A ./out.txt                               #
 #                                                                             #
 #  --> Outputs ascii representation to file ./out.txt                         #
 #                                                                             #
-#  $ tlabel.py --label "Hellorld!" -t                                         #
+#  $ tlabel.py --label "Hellorld!" -T                                         #
 #                                                                             #
 #  --> Outputs text representation to screen                                  #
 #                                                                             #
 #                                                                             #
-#          Any combination of the above ocommands may be used                 #
+#          Any combination of the above commands may be used                  #
 #                                                                             #
 #  $ tlabel.py -h                                                             #
 #                                                                             #
@@ -69,16 +69,16 @@ def numtostars(num):
 parser = argparse.ArgumentParser(description='Tape Labeler')
 
 ## Add function - Test text output to screen
-parser.add_argument('-t', "--test", action="store_true", help='Print output to screen')
+parser.add_argument('-T', "--test", action="store_true", help='Print output to screen')
 
 ## Add function - Label to place on tape
-parser.add_argument('-l', "--label", action='store', type=str, help='Label to punch on tape.')
+parser.add_argument('-L', "--label", action='store', type=str, help='Label to punch on tape.')
 
 ## Add function - Binary file output
-parser.add_argument('-f', "--filename", action="store",type=str, help='Binary Output file path')
+parser.add_argument('-F', "--filename", action="store",type=str, help='Binary Output file path')
 
 ## Add function - Text file output
-parser.add_argument('-a', "--ascii", action="store",type=str, help='Text Output file path')
+parser.add_argument('-A', "--ascii", action="store",type=str, help='Text Output file path')
 
 
 # Process command line argumants
